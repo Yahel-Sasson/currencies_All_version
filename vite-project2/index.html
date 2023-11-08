@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./src/style1.css"> 
+                          <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script defer src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer type="module" src="/src/main.ts"></script>
+    
+    <title>Vite Cryptonite Project97</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <p> Cryptonite</p>
+        <div>
+          <img class="PictureLogo">
+        </div>
+      </header>
+          <!-- nav bar   -->
+      <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+        
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="liveReport-tab" data-bs-toggle="tab" data-bs-target="#liveReport" type="button" role="tab" aria-controls="liveReport" aria-selected="false">Live Report</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="false">About</button>
+                </li>
+              </ul>
+            
+        
+                <form class="d-flex">
+                  <input  id="inputSearch" class="form-control me-2" type="search" placeholder="All" 
+                     aria-label="Search">
+                  <button class="btn btn-outline-success searchBtn" type="button" >Search</button>
+                </form>
+              </div>
+      </nav>
+
+      <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">      
+              <div id="container">  
+                <!-- on the container ROW we will do the addeventListener only ONCE -->
+                <div class="row gy-5" id="cardAll">
+                <!-- here generate all the cards -->
+                </div>
+                <!-- <div class="row gy-5">
+                    <div id="exactMatchCard"></div>
+                </div> -->
+              </div>
+          </div>
+                                     
+          <div class="tab-pane fade" id="liveReport" role="tabpanel" aria-labelledby="liveReport-tab">liveeeeeeeeeeeeeeeeeeeeeeeeee</div>
+          <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="about-tab">
+              <div class="heading">
+                <h1>About Us</h1>
+                <p>Cryptocurrency is digital money that doesn't require a bank or financial institution to verify transactions
+                   and can be used for purchases or as an investment. Transactions are then
+                   verified and recorded on a blockchain, an unchangeable ledger that tracks
+                   and records assets and trades. 
+                </p>
+              </div>
+              <div class="containerAbout">
+                <section class="about">
+                <div class="aboutImage">
+                <img src="./src/assets/images/snowFlakeMacro.avif" >
+                </div>
+                <div class="aboutContent">
+                <h2>Bitcoin Wallet Wakes Up After 6 Years With $80 Million Profit</h2>
+                <p>In August, another BTC wallet woke up after being asleep for almost 13 years.
+                   The wallet moved almost 1005 BTC worth around $29.7 million.
+                    Because of its age, many speculate if this wallet has ties to
+                     the anonymous creator of Bitcoin (BTC), Satoshi Nakamoto.</p>
+               </div>
+               </section>
+             </div>
+
+        </div> 
+ 
+      </div>
+
+
+      <div class="modal fade" id="modal_coin_remove_selection" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">
+            Live-Report Is Limited To 5 Currencies.
+            Selected Currency For Swap,
+            For Regret Press 'Cancel'</h5>
+          </div>
+          <form name="formToggle">
+          <div class="modal-body" data-idToAdd="1234" id="coin_remove_selection_body">
+     
+     
+          </div>
+          </form>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btnClose" >Cancel</button>
+            <button type="button" class="btn btn-primary btnSaveChanges"  >Save changes</button>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="spinner" class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+
+      <button id="spinnerButton">spinner </button>
+
+        
+    </div>
+  </body>
+</html>
+
